@@ -1,0 +1,21 @@
+{% extends "basicTemplate/wrapper.html" %}
+
+  {% block content %}
+   <table border="1" cellpadding="7" cellspacing="0">
+   	<thead>
+   		<th>№ п/п</th>
+   		<th>Название</th>
+   		<th>Общий вес, кг</th>
+   		<th>Общая стоимость, руб.</th>
+   		<th></th>
+   	</thead>
+   {% for party in values %}
+     <tr>
+     {% for val in party %}
+       <td>{{val}}</td>
+     {% endfor %}
+     <td><a href="/batch" class="btn btn-primary btn-lg">Обработать партию</a></td>
+     <tr>
+   {% endfor %}
+   </table>
+  {% endblock %}

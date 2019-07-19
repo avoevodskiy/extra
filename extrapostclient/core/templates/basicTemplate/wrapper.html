@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Отправка партий по физическому лицу</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}" type="text/css">
+</head>
+<body>
+ <div class="jumbotron">
+  <div class="container">
+      <p>
+        <a href="/" class="btn btn-success btn-lg">Список партий</a>
+        <a href="/batch" class="btn btn-primary btn-lg">Обработать партии&raquo;</a>
+        <a href="/contact" class="btn btn-info btn-lg">Для теста</a>
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    {% block content %}
+    {% endblock %}
+  </div>
+  <div class="container">
+    <img src="{% static 'mainapp/image/footer.jpg' %}" class="img-thumbnail">
+    <hr>
+    &copy; 
+  </div>
+</body>
+</html>

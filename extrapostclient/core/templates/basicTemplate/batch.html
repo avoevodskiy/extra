@@ -1,0 +1,22 @@
+{% extends "basicTemplate/wrapper.html" %}
+
+  {% block content %}
+   <table border="1" cellpadding="7" cellspacing="0">
+   	<tr>
+   		<td>№ п/п</td>
+   		<td>Штрихкод</td>
+   		<td>Вес, кг</td>
+   		<td>Общая стоимость, руб.</td>
+   		<td></td>
+   	</tr>
+   {% for party in values %}
+     <tr>
+     {% for val in party %}
+       <td>{{val}}</td>
+     {% endfor %}
+     <td><a href="/batch" class="btn btn-primary btn-lg">Обработать партию</a></td>
+     <tr>
+   {% endfor %}
+   </table>
+  {% endblock %}
+Barcode|Mass|MassRate|Payment|Value|InsrRate|AirRate|Rcpn|AddressTypeTo|NumAddressTypeTo|IndexTo|RegionTo|AreaTo|PlaceTo|LocationTo|StreetTo|HouseTo|LetterTo|SlashTo|CorpusTo|BuildingTo|HotelTo|RoomTo|Comment|MailDirect|TelAddress|Lengtd|Widtd|Height|VolumeWeight|SMSNoticeR
